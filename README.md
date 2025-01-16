@@ -8,19 +8,6 @@ Two datasets are used in this project:
 - **Training Dataset:** Contains labeled data to train models.
 - **Testing Dataset:** Contains unlabeled data for model evaluation.
 
-Key features in the dataset include:
-- **Loan_ID:** Unique loan identifier
-- **Gender:** Male/Female
-- **Married:** Applicant’s marital status
-- **Dependents:** Number of dependents
-- **Education:** Applicant’s education level
-- **ApplicantIncome:** Income of the applicant
-- **CoapplicantIncome:** Income of the co-applicant
-- **LoanAmount:** Loan amount requested
-- **Loan_Amount_Term:** Term of the loan
-- **Credit_History:** Credit history of the applicant
-- **Loan_Status:** Target variable (Y/N for eligible/ineligible)
-
 ## Methodology
 ### 1. Data Exploration and Preprocessing
 - **Loading Data:** Importing training and testing datasets.
@@ -57,8 +44,14 @@ Key features in the dataset include:
 - **Model Performance:** Comparison of accuracy, precision, recall, and ROC-AUC scores across models.
 - **Confusion Matrix:** Provides insights into true positives, true negatives, false positives, and false negatives.
 
+![Image](https://github.com/user-attachments/assets/91edd08e-8527-421b-83c1-2cc37932cef1)
+
 ## Conclusion and Future Work
 - **Key Insights:** Identification of strong predictors for loan eligibility.
+- Strong Indicators: **Loan Perccentage of Income**, **Grade D Loan**, **Home Ownership**
+
+![Image](https://github.com/user-attachments/assets/14968823-974b-4819-a090-108abfd93438)
+  
 - **Potential Improvements:**
   - Incorporate additional data sources for richer features.
   - Explore hyperparameter optimization for model improvement.
