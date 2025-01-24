@@ -44,38 +44,38 @@ Two datasets are used in this project:
 - **Model Performance:** Comparison of accuracy, precision, recall, and ROC-AUC scores across models.
 
 <table align="center">
-<tr>
-  <th>MODEL</th>
-  <th>ACCURACY</th>
-  <th>PRECISION</th>
-  <th>RECALL</th>
-  <th>F1 SCORE</th>
-  <th>ROC-AUC</th>
-</tr>
-<tr>
-  <td>Random Forest Classifier</td>
-  <td align="center">95.0%</td>
-  <td align="center">93.0%</td>
-  <td align="center">71.0%</td>
-  <td align="center">80.0%</td>
-  <td align="center">85.0%</td>
-</tr>
-<tr>
-  <td>Gradient Boosting Classifier</td>
-  <td align="center">95.0%</td>
-  <td align="center">92.0%</td>
-  <td align="center">71.0%</td>
-  <td align="center">80.0%</td>
-  <td align="center">85.0%</td>
-</tr>
-<tr>
-  <td>X Gradient Boosting Classifier</td>
-  <td align="center">95.0%</td>
-  <td align="center">90.0%</td>
-  <td align="center">74.0%</td>
-  <td align="center">81.0%</td>
-  <td align="center">86.0%</td>
-</tr>
+ <tr>
+   <th>MODEL</th>
+   <th>ACCURACY</th>
+   <th>PRECISION</th>
+   <th>RECALL</th>
+   <th>F1 SCORE</th>
+   <th>ROC-AUC</th>
+ </tr>
+ <tr>
+   <td>Random Forest Classifier</td>
+   <td align="center">95.0%</td>
+   <td align="center">93.0%</td>
+   <td align="center">71.0%</td>
+   <td align="center">80.0%</td>
+   <td align="center">85.0%</td>
+ </tr>
+ <tr>
+   <td>Gradient Boosting Classifier</td>
+   <td align="center">95.0%</td>
+   <td align="center">92.0%</td>
+   <td align="center">71.0%</td>
+   <td align="center">80.0%</td>
+   <td align="center">85.0%</td>
+ </tr>
+ <tr>
+   <td>X Gradient Boosting Classifier</td>
+   <td align="center">95.0%</td>
+   <td align="center">90.0%</td>
+   <td align="center">74.0%</td>
+   <td align="center">81.0%</td>
+   <td align="center">86.0%</td>
+ </tr>
 </table>
 
 - **Confusion Matrix:** Provides insights into true positives, true negatives, false positives, and false negatives.
