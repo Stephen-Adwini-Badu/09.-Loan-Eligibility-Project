@@ -80,7 +80,13 @@ Two datasets are used in this project:
 
 - **Confusion Matrix:** Provides insights into true positives, true negatives, false positives, and false negatives.
 
-![Image](https://github.com/user-attachments/assets/91edd08e-8527-421b-83c1-2cc37932cef1)
+![9 1](https://github.com/user-attachments/assets/e6c27ce1-988c-42e4-92c4-54ba71f5451d)
+
+  
+- **ROC-AUC and Calibration Curves:** ROC (Receiver Operating Characteristic) curves assess the performance of a classification model by plotting true positive rate against false positive rate, while calibration curves evaluate how well predicted probabilities align with actual outcomes.
+
+![9 2](https://github.com/user-attachments/assets/903b78b4-0280-49e5-ae5c-06ca72e4e4bb)
+
 
 ## Conclusion and Future Work
 - **Key Insights:** Identification of strong predictors for loan eligibility.
