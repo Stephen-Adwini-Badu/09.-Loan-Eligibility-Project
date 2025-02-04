@@ -25,15 +25,19 @@ Two datasets are used in this project:
 
 ### 4. Model Training and Evaluation
 - Splitting the dataset into training and testing subsets.
+
 - Training machine learning models:
   - Random Forest Classifier
   - Gradient Boosting Classifier
   - XGBoost Classifier
+
 - Evaluation metrics include:
   - Accuracy
   - Precision, Recall, F1-Score
   - ROC-AUC Score
   - Confusion Matrix Visualization
+  - ROC-AUC and Calibration Curves
+  - Feature Importance
 
 ## Machine Learning Models
 - **Random Forest Classifier:** Ensemble learning method for classification tasks.
@@ -41,58 +45,75 @@ Two datasets are used in this project:
 - **XGBoost Classifier:** Extreme Gradient Boosting implementation optimized for speed and performance.
 
 ## Results and Metrics
-- **Model Performance:** Comparison of accuracy, precision, recall, and ROC-AUC scores across models.
+- ### Model Performance:
+   Overall, while all three models have excellent performance, **X Gradient Boosting** appears to have a **slight edge in terms of recall, F1 score, and ROC-AUC.**
 
-<table align="center">
- <tr>
-   <th>MODEL</th>
-   <th>ACCURACY</th>
-   <th>PRECISION</th>
-   <th>RECALL</th>
-   <th>F1 SCORE</th>
-   <th>ROC-AUC</th>
- </tr>
- <tr>
-   <td>Random Forest Classifier</td>
-   <td align="center">95.0%</td>
-   <td align="center">93.0%</td>
-   <td align="center">71.0%</td>
-   <td align="center">80.0%</td>
-   <td align="center">85.0%</td>
- </tr>
- <tr>
-   <td>Gradient Boosting Classifier</td>
-   <td align="center">95.0%</td>
-   <td align="center">92.0%</td>
-   <td align="center">71.0%</td>
-   <td align="center">80.0%</td>
-   <td align="center">85.0%</td>
- </tr>
- <tr>
-   <td>X Gradient Boosting Classifier</td>
-   <td align="center">95.0%</td>
-   <td align="center">90.0%</td>
-   <td align="center">74.0%</td>
-   <td align="center">81.0%</td>
-   <td align="center">86.0%</td>
- </tr>
-</table>
+   - **Similar Accuracy:**  
+   All three models have the same **high accuracy of 95.0%**, indicating that they are equally good at predicting the correct class.  
 
-- **Confusion Matrix:** Provides insights into true positives, true negatives, false positives, and false negatives.
+   - **XGB has slightly better Recall and F1 score:**  
+   X Gradient Boosting has a **slightly higher recall (74.0%)** and **F1 score (81.0%)** compared to the other two models.  
 
-![9 1](https://github.com/user-attachments/assets/e6c27ce1-988c-42e4-92c4-54ba71f5451d)
+   - **Random Forest has slightly better Precision:**  
+   Random Forest has a **slightly higher precision (93.0%)** compared to Gradient Boosting **(92.0%)** and X Gradient Boosting **(90.0%).**  
+
+   - **XGB has slightly better ROC AUC:**  
+   X Gradient Boosting has a **slightly higher ROC AUC (86.0%)** compared to the other two models **(85.0%).** <p>
+
+   <table align="center">
+     <tr>
+       <th>MODEL</th>
+       <th>ACCURACY</th>
+       <th>PRECISION</th>
+       <th>RECALL</th>
+       <th>F1 SCORE</th>
+       <th>ROC-AUC</th>
+     </tr>
+     <tr>
+       <td>Random Forest Classifier</td>
+       <td align="center">95.0%</td>
+       <td align="center">93.0%</td>
+       <td align="center">71.0%</td>
+       <td align="center">80.0%</td>
+       <td align="center">85.0%</td>
+     </tr>
+     <tr>
+       <td>Gradient Boosting Classifier</td>
+       <td align="center">95.0%</td>
+       <td align="center">92.0%</td>
+       <td align="center">71.0%</td>
+       <td align="center">80.0%</td>
+       <td align="center">85.0%</td>
+     </tr>
+     <tr>
+       <td>X Gradient Boosting Classifier</td>
+       <td align="center">95.0%</td>
+       <td align="center">90.0%</td>
+       <td align="center">74.0%</td>
+       <td align="center">81.0%</td>
+       <td align="center">86.0%</td>
+     </tr>
+   </table>
+
+ - ### Confusion Matrix
+   - **All three models (Random Forest, Gradient Boosting, and XGBoost)** demonstrate **strong accuracy** in identifying true defaulters (85%) and show **low misclassification** rates for defaulters as paid (ranging from 0.8% to 1.1%). 
+
+   - The models also have **low false positive rates** for true payers (around 4%), with the **XGBoost model slightly outperforming** the others in this aspect. Overall, the models are **highly effective and reliable** in distinguishing between defaulters and true payers.
+
+ ![9 1](https://github.com/user-attachments/assets/e6c27ce1-988c-42e4-92c4-54ba71f5451d)
 
   
-- **ROC-AUC and Calibration Curves:** ROC (Receiver Operating Characteristic) curves assess the performance of a classification model by plotting true positive rate against false positive rate, while calibration curves evaluate how well predicted probabilities align with actual outcomes.
+ - ### ROC-AUC and Calibration Curves:
+   - **All three models (RFC, GBC, XGB)** have **comparable performance** in terms of distinguishing between classes, as indicated by **similar AUC values**. This suggests that **none of the models consistently outperforms the others** in terms of classification accuracy.
+   
+   - **The calibration curves for all three models** are **close to the perfect** calibration line (red dashed line), indicating that the predicted probabilities are well-calibrated and reflect the true likelihood of the positive class.
 
-![9 2](https://github.com/user-attachments/assets/903b78b4-0280-49e5-ae5c-06ca72e4e4bb)
+ ![9 2](https://github.com/user-attachments/assets/903b78b4-0280-49e5-ae5c-06ca72e4e4bb)
 
+ - ### Feature Importance
+   - With regards to feature importance the most consistently influencial feature was **Loan Percentage Income and Grade D Loan**  
+   - Other notables features were;  
+     - **Loan Interest Rate**  
+     - **Rent Type Home Ownership**
 
-## Conclusion and Future Work
-- **Key Insights:** Identification of strong predictors for loan eligibility.
-- **Strong Indicators:** **Loan Perccentage of Income**, **Grade D Loan**, **Home Ownership**
-
-![Image](https://github.com/user-attachments/assets/14968823-974b-4819-a090-108abfd93438)
-  
-- **Potential Improvements:**
-  - Incorporate additional data sources for richer features.
+ ![Image](https://github.com/user-attachments/assets/14968823-974b-4819-a090-108abfd93438)
